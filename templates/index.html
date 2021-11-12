@@ -1,0 +1,123 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo%}
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Site PI</title>
+
+<body>
+<!-- Cabeçalho -->
+    <header id="inicio">
+        <img id="logo" src="../static/imagens/logo.jpg" alt="Logo">
+        <h1>15 anos de experiência</h1>
+    </header>
+
+    <nav> <!-- Menu de navegação -->
+        <a href="#empresa">Sobre</a>
+        <a href="#serviços">Serviços</a>
+        <a href="#contatos">Contatos</a>
+    </nav>
+
+<!-- Principal -->
+    <main><!--  COLOCAR TUDO AQUI, exceto o RODAPÉ  -->
+
+        <section class="container">
+
+            <h2 id="serviços">Serviços</h2>
+
+            <div>
+                <p>Atuamos no mercado dando suporte aos nossos clientes quanto a constituição, administração e consultorias da área</p>
+                <p>Serviços de rotina contábil conforme as normas contábeis e legislação em vigor</p>
+                <p>Rotina fiscal completa</p>
+                <p>Abertura e fechamento de empresas</p>
+                <p>Atendimento a microempreendedor individual - MEI</p>
+                <p>Execução da rotina do departamento de pessoal desde o registro de funcionário à folha de pagamentos incluindo guia de impostos</p>
+                <p>Escrituração contábil</p>
+                <p>Declaração de imposto de renda</p>
+                <p>Suporte técnico aos departamentos da empresa com visitas sob demanda, com elabroração de relátórios para a comunicação de sugestões ou divergências</p>
+                <br>
+            </div>
+        </section>
+
+        <section class="container">
+
+            <h2>Links Úteis</h2>
+
+            <div class="alinha">
+                <div>
+                    <!-- TUDO QUE COLOCAR AQUI DENTRO VAI FICAR CENTRALIZADO -->
+                    <button><a href="https://www.gov.br/receitafederal/pt-br" target="_blank"><img src="../static/imagens/Rec150x.jpg"></a></button>
+                    <button><a href="https://servicos.receita.fazenda.gov.br/Servicos/certidaointernet/PJ/Emitir" target="_blank"><img src="../static/imagens/CertNeg.jpg"></a></button>
+                    <button><a href="https://servicos.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank"><img src="../static/imagens/ConsultaCNPJ.jpg"></a></button>
+                    <button><a href="https://www.saogoncalo.rj.gov.br/" target="_blank"><img src="../static/imagens/Prefeitura.jpg"></a></button>
+                    <button><a href="http://www.fazenda.rj.gov.br" target="_blank"><img src="../static/imagens/RecEstadual.jpg"></a></button>
+                    <button><a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/consultasituacao/consultapublica.asp" target="_blank"><img src="../static/imagens/ConsultaCPF.jpg"></a></button>
+                </div>
+            </div>
+        </section>
+
+<!--    TEM QUE MODIFICAR AQUI DENTRO -->
+        <section class="container">
+
+            <h2 id="empresa">Empresa</h2>
+
+            <section class="galeria">
+                <img src="../static/imagens/001.jpg" alt="" onclick="mostrarImagem(this)">
+                <img src="../static/imagens/002.jpg" alt="" onclick="mostrarImagem(this)">
+                <img src="../static/imagens/003.jpg" alt="" onclick="mostrarImagem(this)">
+                <img src="../static/imagens/004.jpg" alt="" onclick="mostrarImagem(this)">
+                <img src="../static/imagens/005.jpg" alt="" onclick="mostrarImagem(this)">
+            </section>
+
+            <section class="conteiner">
+                <span onclick="this.parentElement.style.display='none'" class="btnFechar">&times;</span>
+                <img src="" id="imagemGrande">
+            </section>
+
+            </section>
+<!--    TEM QUE MODIFICAR SO ACIMA -->
+            <section class="container">
+
+                <h2>Sobre</h2>
+
+                <div>
+                    <h3>Nossa Missão</h3>
+                    <p>Fornecer serviços de qualidade em tempo curto para que o empressário tenha confiança ao tomar decisões.</p>
+                    <h3>Visão Empresarial</h3>
+                    <p>Sermos reconhecidos pela apresentação de soluções contábeis e pela agilidade nas respostas as demandas de nossos clientes.</p>
+                    <h3>Valores</h3>
+                    <p>Ética profissional, busca contínua pela qualidade, trabalho em equipe, transparência, dinamismo e parceria com nossos clientes e a comunidade.</p>
+                    <br>
+                </div>
+            </section>
+
+            <section class="container">
+
+                <h2 id="contatos">Contatos</h2>
+
+                <section class="contato">
+
+                    <div class="contato-card">
+                        <h3>Entre em Contato!</h3>
+                    <!-- TUDO QUE COLOCAR AQUI DENTRO VAI FICAR CENTRALIZADO -->
+                        <button><a href="" target="_blank"><img src="../static/imagens/Telefone_80.jpg"></a></button>
+                        <button><a href="" target="_blank"><img src="../static/imagens/Whats_80.jpg"></a></button>
+                        <button><a href="https://www.instagram.com/rjmcontabil/" target="_blank"><img src="../static/imagens/Instagram_80.jpg"></a></button>
+                        <button><a href="https://www.facebook.com/RJMContabilidadee" target="_blank"><img src="../static/imagens/Facebook_80.jpg"></a></button>
+                        <button><a href="{{ url_for('mensagem')}}" target="_blank"><img src="../static/imagens/Mensagem_80.jpg"></a></button>
+                    </div>
+
+                    <h3>Localização</h3>
+
+                    <div id="map"></div>
+
+                </section>
+    <!-- inicio do mapa de localização -->
+            <script
+                    src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" async>
+            </script>
+     <!-- Fim do mapa de localização -->
+            </section>
+
+    </main>
+</body>
+    {% endblock %}

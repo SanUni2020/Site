@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* comentário */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* *{tudo aqui dentro é global, vale para todos}
+ - Zera as margens dos navegadores */
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+/* Cores e fontes usadas na página */
+:root {
+    --cor0: #D9BA5F;  /* fundo geral */
+    --cor1: #D9BA5F; /* ok trocada dourada */
+    --cor2: #4E7FBF; /* para fundo dos blocos */
+    --cor3: #16288C; /* ok trocada escura */
+    --cor4: #1B2FA6; /* hover do nav */
+    --cor5: #456EBF; /* ok trocada clara */
+    --cor6: #DFD1A5;  /*bege clarinho*/
+    --cor7: #FEFAE7;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+}
+
+#logo {
+max-width: 100%; /* imagem adapta ao tamanho da tela*/
+border-radius: 150px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 { /* aperta ctrl + espaço, rola até o final e escolhe a cor da variável --cor: #xxxxxx */
+    color: white;
+    font-family: var(--fonte-destaque);
+ /*   font-size: 3em; */
+ /*   font-size: max(60px, 5vw); */
+    font-size: min(3em, 10vw); /* pega o menor valor entre os dois medida pela viewport */
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+body {
+/*background-color: #D9BA5F; /* cor de fundo do site inteiro */
+background-image: linear-gradient(to top, var(--cor0), var(--cor7)); /* degradê de baixo para cima */
+}
+
+
+/*                    MENU de NAVEÇAÇAO               */
+nav {
+    text-align: center; /*TESTE CENTRALIZANDO MENU---*/
+    background-color: var(--cor5); /* faixa azul cor5*/
+    max-width: 1440px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/*nav > a (o link que está dentro de nav)*/
+nav > a {
+    color: var(--cor1);
+    padding: min(10px, 5px); /*   TESTANDO 10px;*/
+    border-radius: 5px; /*borda arredondada*/
+    text-decoration: none;
+    font-weight: bold;
+    font-size: min(1.5em, 5vw); /* pega o menor valor entre os dois medida pela viewport */
+    transition-duration: .5s; /*tempo q demora para transição da seleção do mouse*/
+}
+/*nav > a:hover (quando passar o mouse sobre)*/
+nav > a:hover {
+    background-color: var(--cor4);
+    color: var(--cor5)
+}
+
+/*          MAIN           */
+main {
+ /*   min-width: 150px;*/
+    max-width: 1252px;
+    height: auto; /*     altura do main */
+    margin: auto;
+    margin-bottom: 3px;
+    padding: 3px;
+    background-color: #4E7FBF;  /* estava white / var(--cor0)/ #FEFAE7 quase branco /#DFD1A5 clarinho */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container {
+    max-width: 100%;
+ /*   min-width: 150px;       RETIREI O MIN POQRQUE DIMINUI ATÉ PARAR DE DIMINUIR A TELA   */
+    width: 1251px;
+    height: 1070; /*     altura do main */
+    margin: auto;
+    margin-bottom: 0px;
+    padding: 0px;
+    background-color: white;  /* estava white */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+}
+section > h2 {
+    font-family: var(--fonte-destaque);
+    color: var(--cor4);
+    font-size: min(1.5em, 5vw);
+    font-weight: bold;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor7)); /* estava transparent*/
+    text-align: center;
+    text-indent: 8px;
+}
+#foto  {
+    max-width: 100%;
+    width: 1250px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h3 {
+    font-family: var(--fonte-padrao);
+    color: var(--cor4);
+    font-size: min(1.5em, 5vw);
+    font-weight: bold;
+    background-image: linear-gradient(to right, var(--cor1), var(--cor7)); /* estava transparent*/
+    text-align: left;
+    text-indent: 30px;
+}
+
+/* para todos os paragrafos p*/
+main p {
+    margin: 30px;
+    text-align: center;
+    text-indent: 0px;
+   /* font-size: 1.2em;*/
+    font-size: min(1.2em, 5vw);
+ /* font-size: 1em; (se quiser regular o tamanho da fonte)
+    line-height: 2em; ( se quiser regular o espaço entre as linhas) */
+}
+
+
+.alinha {
+/*background: black;*/
+
+display: flex;
+
+justify-content: center;
+align-items: center;
+}
+/* A IMAGEM QUE VAI DENTRO TEM QUE SER DO MESMO TAMANHO */
+button {
+/* background: red;*/
+width: 150px;
+height: 150px;
+margin-left: 4vh;/*MEXENDO AQUI*/
+margin-top: 5px;/*MEXENDO AQUI*/
+margin-bottom: 2.5px;/*MEXENDO AQUI*/
+}
+button:hover{/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    opacity: 0.5;
+}
+
+
+/* ----------------   MAPA E CONTATOS COMEÇA AQUI  ---------------- */
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+.contato {
+    padding: 60px 20%;
+    /*background: red;*/
+  /*  position: relative;*/
+}
+.contato .contato-card {
+    width: 100%;
+  /*  width: 350px;
+    height: 300px;*/
+
+    background-image: linear-gradient(to right, var(--cor7), var(--cor1));
+  /*  position: absolute;
+    z-index:99;*/
+    border-radius: 8px;
+
+    top: calc(50% - 150px);
+  /*  left: calc(20% - 175px)*/
+  /*  margin-bottom: 40px;*/
+}
+.contato .contato-card button {
+
+/*opacity: 0.8;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*justify-content: center;*/
+align-items: center;
+
+/*max-width: 100%;*/
+width: 80px;
+height: 80px;
+/*margin-left: 43px;*/
+
+margin-top: 5px;
+margin-left: 6vh;
+margin-bottom: 5px;
+
+/*padding: min(10px, 5px); /*   TESTANDO 10px;*/
+}
+.contato .contato-card button:hover{/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    opacity: 0.5;
+}
+
+
+/* ----------------   MAPA E CONTATOS TERMINA AQUI  ---------------- */
+
+
+
+
+/* ----- FORMULÁRIO DE CONTATO COMEÇA AQUI  ----- */
+h4 {
+display:flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+background-color: cornflowerblue;
+color: white;
+font-family: Cambria, Arial;
+font-size: min(1.5em, 5vw);
+}
+
+.mensagem {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 80vh;
+}
+
+form {
+font-family: Arial;
+}
+
+form div {
+display: flex;
+flex-direction: column;
+margin-bottom: 30px;
+}
+
+form input, form textarea {
+outline: unset;
+padding: 20px;
+min-width: 300px;
+border: 1px solid cornflowerblue;
+border-radius: 20px;
+}
+
+form input:focus, form textarea:focus {
+background-color: wheat;
+}
+
+form input[type=submit] {
+background-color: cornflowerblue;
+color: white;
+cursor: pointer;
+font-size: min(2em, 5vw);
+font-weight: bold;
+}
+
+form label {
+margin-left: 10px;
+}
+/* ----- FORMULÁRIO DE CONTATO TERMINA AQUI  ----- */
+
+
+/* Rodapé e botão fixo de ir para topo da pagina do site */
+#topo {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+}
+footer {
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor3));
+    color: white;
+    text-align: center;
+    font-size: min(0.8em, 5vw);
+    padding: 5px;
+}
+
+/* ------------------ AQUI COMEÇA A GALERIA DE IMAGENS --------------- */
+
+.galeria{
+    display: inline-block;
+  /*  border: 1px solid #000; /*cor black*/
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.galeria img{/*toda img que usa a classe galeria*/
+   /* opacity: 0.5;*/
+    cursor: pointer;
+    width: 150px;
+    margin-top: 5px;
+    margin-left: 8.8vh;/*alterando aqio ---------------------------------------*/
+    margin-bottom: 2.5px;
+   /* margin-right: 0px;*/
+}
+.galeria img:hover{
+    opacity: 0.5;
+}
+
+.conteiner{
+    position: relative;
+    display: none;
+    width: 60%;
+    margin: auto;
+}
+.conteiner img{/*contem a imagemGrande*/
+    width: 100%;/*a imagem vai ocupar 100% do container*/
+}
+
+.btnFechar{
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+    color: cornflowerblue;/*#fff;/*cor branca*/
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* ------------------ AQUI TERMINA A GALERIA DE IMAGENS --------------- */
